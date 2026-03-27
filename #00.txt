@@ -1,0 +1,14 @@
+############ LEARN JSP ############
+### @nantenainarld
+
+Prerequisites :
+    - Java Application Server (Tomcat)
+    - Java
+    - IDE
+
+Installation tomcat : 
+    - while using VSCODE :
+        install the comnuity server extension and install tomcat inside
+    - while using eclipse : 
+        just add your tomcat server inside the eclipse server 
+        
