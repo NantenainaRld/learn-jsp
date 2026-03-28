@@ -1,14 +1,36 @@
 ############ LEARN JSP ############
 ### @nantenainarld
 
-Prerequisites :
+# Prerequisites :
     - Java Application Server (Tomcat)
     - Java
     - IDE
 
-Installation tomcat : 
+# Installation tomcat : 
     - while using VSCODE :
-        install the comnuity server extension and install tomcat inside
+        * install the comnuity server extension and install tomcat inside
+        * install maven
     - while using eclipse : 
-        just add your tomcat server inside the eclipse server 
-        
+        just add your tomcat server inside the eclipse server
+
+# Architecture Recap
+    - Dynamic Web App (Eclipse):
+        my-jsp-app/
+        └── WebContent (or webapp)/
+            └── index.jsp (Directly here)
+
+    - Maven Web App (VS Code/Eclipse):
+        my-jsp-app/
+        └── src/
+            └── main/
+                └── webapp/
+                    └── index.jsp (Must be in this specific sub-folder)
+
+# URL & Context Path Logic
+    - DWA: http://localhost:8080/my-jsp-app/
+        (Mapped automatically by Eclipse)
+
+    - Maven (VS Code): http://localhost:8080/[ContextPath]/
+        (Crucial: You must deploy the 'webapp' folder specifically. 
+        If you name the context 'my-jsp-app', the URL becomes:
+        http://localhost:8080/my-jsp-app/)       
