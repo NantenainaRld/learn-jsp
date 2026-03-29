@@ -41,3 +41,10 @@
     <%= java code here %>
     ```    
     **example : <h2> <%= new java.util.Date() %> </h2>
+### JSP Scriplets
+    ```
+    <% 
+        for (int i = 0; i < 5; i++) {
+            out.println("Hello world");
+        }
+    %>
