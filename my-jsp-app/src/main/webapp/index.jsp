@@ -6,13 +6,24 @@
         <%= new java.util.Date() %>
     </b>
     <span style="color: red;" >
+        <%-- JSP expression --%>
         <%= new String("Hello World").toUpperCase() %>
-    </span><b>
+    </span><br>
+
+    <%-- JSP scriplets  --%>
     <% 
         for (int i = 0; i < 5; i++){
             out.println("hey");
         }
+    %><br>
+
+    <%-- JSP declaration  --%>
+    <%!
+        String maketItLower(String text) {
+            return text.toLowerCase();
+        }
     %>
+    <%= maketItLower("THIS WILL BE IN LOWER CASE") %>
 </body>
 
 </html>
