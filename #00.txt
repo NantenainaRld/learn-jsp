@@ -33,4 +33,11 @@
     - Maven (VS Code): http://localhost:8080/[ContextPath]/
         (Crucial: You must deploy the 'webapp' folder specifically. 
         If you name the context 'my-jsp-app', the URL becomes:
-        http://localhost:8080/my-jsp-app/)       
+        http://localhost:8080/my-jsp-app/)   
+
+# 00
+### JSP expressions
+    ```
+    <%= java code here %>
+    ```    
+    **example : <h2> <%= new java.util.Date() %> </h2>

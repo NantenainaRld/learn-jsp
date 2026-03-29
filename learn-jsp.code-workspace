@@ -21,5 +21,6 @@
         "database": "mysql",
       },
     ],
+    "java.configuration.updateBuildConfiguration": "interactive",
   },
 }
