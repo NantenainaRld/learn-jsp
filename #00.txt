@@ -30,21 +30,44 @@
     - DWA: http://localhost:8080/my-jsp-app/
         (Mapped automatically by Eclipse)
 
-    - Maven (VS Code): http://localhost:8080/[ContextPath]/
-        (Crucial: You must deploy the 'webapp' folder specifically. 
-        If you name the context 'my-jsp-app', the URL becomes:
-        http://localhost:8080/my-jsp-app/)   
+    - Maven (VS Code): you must compile the project :
+        `` mvn compile war:exploded ``
+        - then run the   target/my-jsp-app ` to the server 
+        - then : http://localhost:8080/my-jsp-app/
 
 # 00
-### JSP expressions
+### JSP expressions (return sting like echo)
     ```
     <%= java code here %>
     ```    
     **example : <h2> <%= new java.util.Date() %> </h2>
-### JSP Scriplets
+### JSP Scriplets (local variables)
     ```
     <% 
         for (int i = 0; i < 5; i++) {
             out.println("Hello world");
         }
     %>
+### JSP Declarations (global variables)
+    ```
+    <%!
+        String var = "test";
+        String makeItLower(String text) {
+            return text.toLowerCase();
+        }
+    %>
+    ```
+
+# 01
+### Call Java Class from JSP
+    - create the folder /src/main/java
+        - create a package : com.learn.jsp
+            - create the java class : HelloWorld.java
+
+    - create a hello_world.jsp in /src/main/webapp/WEB-INCF/views
+        - just call the method like this ``package.class.method()`` : 
+            ``` <%= com.leanr.jsp.HelloWorld.HelloWorldLowerCase() %>
+            ```
+        - you can also use :
+            ``<%@ page import="com.learn.jsp.HelloWorld" %>`` and use direct without the package : 
+                `` <%= HelloWorld.HelloWorldLowerCase() %> ``
